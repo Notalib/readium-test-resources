@@ -15,6 +15,9 @@ Favor changes that keep fixtures deterministic, easy to rebuild, and representat
 - `Resources/webpub/epub+audio/`: WebPub fixtures that include audio resources.
 - `Resources/webpub/audiobook/`: Audiobook fixtures packaged from source directories.
 - `Resources/webpub/audiobook+remote/`: Remote audiobook manifests (single JSON file per fixture directory).
+- `Resources/webpub/divina/`: DiViNa fixtures (folder, packaged as `.divina` by build script). Generated from `epub+audio` sources via `bin/make_comic_divina.py`.
+- `Resources/cbz/`: Comic Book ZIP source directories (packaged as `.cbz`).
+- `Resources/downloaded/`: **Gitignored.** Pre-built archives downloaded by `bin/download_sample_fixtures.py`. Not committed; populate locally after cloning.
 - `bin/build-publications.sh`: Source of truth for inventory and packaging behavior.
 
 ## Build and Validation Commands

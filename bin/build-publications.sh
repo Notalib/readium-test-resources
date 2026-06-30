@@ -23,6 +23,9 @@ Examples:
   webpub/audiobook/38533
   webpub/audiobook+remote/39031_auth_audiobook
   pdf/alice
+  cbz/sample_comic
+  webpub/divina/50272-nota-comics
+  downloaded/pepper-and-carrot-ep01
 EOF
 }
 
@@ -101,6 +104,27 @@ discover_publications() {
     json_path="$(single_json_file "$path")"
     printf 'webpub/audiobook+remote/%s\tremote-json\t%s\t%s\n' "$name" "$path" "$(basename "$json_path")"
   done
+
+  for path in "$RESOURCES_DIR"/cbz/*; do
+    [[ -d "$path" ]] || continue
+    name="$(basename "$path")"
+    printf 'cbz/%s\tcbz\t%s\t%s.cbz\n' "$name" "$path" "$name"
+  done
+
+  for path in "$RESOURCES_DIR"/webpub/divina/*; do
+    [[ -d "$path" ]] || continue
+    name="$(basename "$path")"
+    printf 'webpub/divina/%s\tdivina\t%s\t%s.divina\n' "$name" "$path" "$name"
+  done
+
+  if [[ -d "$RESOURCES_DIR/downloaded" ]]; then
+    for path in "$RESOURCES_DIR"/downloaded/*.cbz "$RESOURCES_DIR"/downloaded/*.divina; do
+      [[ -f "$path" ]] || continue
+      filename="$(basename "$path")"
+      stem="${filename%.*}"
+      printf 'downloaded/%s\tpre-built\t%s\t%s\n' "$stem" "$path" "$filename"
+    done
+  fi
 }
 
 list_publications() {
@@ -124,7 +148,7 @@ collect_zip_entries() {
     [[ "$entry_path" == "$exclude_entry" ]] && continue
 
     printf '%s\n' "$entry_path"
-  done < <(find . -mindepth 1 | LC_ALL=C sort)
+  done < <(find . -mindepth 1 -type f | LC_ALL=C sort)
 }
 
 build_flat_archive() {
@@ -215,6 +239,12 @@ build_publications() {
         ;;
       webpub|audiobook)
         build_flat_archive "$source_path" "$output_path"
+        ;;
+      cbz|divina)
+        build_flat_archive "$source_path" "$output_path"
+        ;;
+      pre-built)
+        cp "$source_path" "$output_path"
         ;;
       remote-json)
         copy_remote_json "$source_path" "$output_path"

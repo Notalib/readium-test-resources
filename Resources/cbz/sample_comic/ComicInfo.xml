@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComicInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Title>Sample Comic</Title>
+  <Series>Flutter Readium Sample</Series>
+  <Number>1</Number>
+  <Writer>Flutter Readium</Writer>
+  <PageCount>3</PageCount>
+  <Pages>
+    <Page Image="0" Type="FrontCover" />
+    <Page Image="1" />
+    <Page Image="2" />
+  </Pages>
+</ComicInfo>
