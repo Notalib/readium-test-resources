@@ -5,8 +5,10 @@ These files are NOT checked into the repo (Resources/downloaded/ is gitignored).
 Run this script once after cloning to get realistic test publications.
 
 Usage:
-  bin/download_sample_fixtures          # download all fixtures
-  bin/download_sample_fixtures --force  # re-download even if already present
+  bin/download_sample_fixtures                        # download all fixtures
+  bin/download_sample_fixtures list                   # list available fixture IDs
+  bin/download_sample_fixtures pepper-and-carrot-ep01 # download one fixture
+  bin/download_sample_fixtures --force                # re-download even if already present
 
 Current fixtures:
   pepper-and-carrot-ep01.cbz  — Episode 1 of Pepper & Carrot by David Revoy
@@ -118,14 +120,36 @@ def build_fixture(fixture: dict, force: bool) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument(
+        "fixtures",
+        nargs="*",
+        metavar="FIXTURE",
+        help="Fixture stems to download (e.g. pepper-and-carrot-ep01). Default: all. Use 'list' to list available IDs.",
+    )
     parser.add_argument("--force", action="store_true", help="Re-download even if the file already exists")
     args = parser.parse_args()
 
+    if args.fixtures == ["list"]:
+        for fixture in FIXTURES:
+            stem = Path(fixture["filename"]).stem
+            print(f"downloaded/{stem}\t{fixture['description']}")
+        return 0
+
+    selected = set(args.fixtures) if args.fixtures else None
+    to_download = [
+        f for f in FIXTURES
+        if selected is None or Path(f["filename"]).stem in selected
+    ]
+
+    if selected and not to_download:
+        print(f"Error: no fixtures match {sorted(selected)}", file=sys.stderr)
+        return 1
+
     print(f"Fixture directory: {PUBS_DIR.relative_to(Path.cwd())}")
-    for fixture in FIXTURES:
+    for fixture in to_download:
         build_fixture(fixture, force=args.force)
 
-    print("\nDone. Open the example app and load the fixture from the bookshelf.")
+    print("\nDone.")
     return 0
 
 

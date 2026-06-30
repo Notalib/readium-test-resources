@@ -244,6 +244,12 @@ build_publications() {
         build_flat_archive "$source_path" "$output_path"
         ;;
       pre-built)
+        if [[ ! -f "$source_path" ]]; then
+          require_tool python3
+          local fixture_name="${publication_id#downloaded/}"
+          printf 'Downloading %s...\n' "$fixture_name"
+          python3 "$ROOT_DIR/bin/download_sample_fixtures.py" "$fixture_name"
+        fi
         cp "$source_path" "$output_path"
         ;;
       remote-json)
