@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" prefix="nordic: http://www.mtm.se/epub/ dbb: http://www.nota.dk/formats" version="3.0" unique-identifier="pub-identifier">
+   <metadata>
+      <dc:identifier id="pub-identifier">712199</dc:identifier>
+      <dc:title>De nye læsere</dc:title>
+      <dc:format>EPUB3</dc:format>
+      <dc:language>da</dc:language>
+      <dc:subject>ordblindhed</dc:subject>
+      <dc:subject>folkeskolen</dc:subject>
+      <dc:publisher>Nota</dc:publisher>
+      <dc:rights>Vær opmærksom på Notas vilkår for brug</dc:rights>
+      <dc:date>2012</dc:date>
+      <dc:contributor>Projektansvarlig: Lóa Stefánsdóttir </dc:contributor>
+      <meta property="dcterms:modified">2025-06-12T12:42:34Z</meta>
+   </metadata>
+   <manifest>
+      <item id="document_1" media-type="application/xhtml+xml" href="dk-nota-712199-0001-acknowledgments.xhtml" />
+      <item id="document_2" media-type="application/xhtml+xml" href="dk-nota-712199-0002-preface.xhtml" />
+      <item id="document_3" media-type="application/xhtml+xml" href="dk-nota-712199-0003-frontmatter.xhtml" />
+      <item id="document_4" media-type="application/xhtml+xml" href="dk-nota-712199-0004-frontmatter.xhtml" />
+      <item id="document_5" media-type="application/xhtml+xml" href="dk-nota-712199-0005-frontmatter.xhtml" />
+      <item id="document_6" media-type="application/xhtml+xml" href="dk-nota-712199-0006-part.xhtml" />
+      <item id="document_7" media-type="application/xhtml+xml" href="dk-nota-712199-0007-part.xhtml" />
+      <item id="document_8" media-type="application/xhtml+xml" href="dk-nota-712199-0008-part.xhtml" />
+      <item id="image_1" href="images/dk-nota-712199-001.jpg" media-type="image/jpeg" />
+      <item id="image_2" href="images/dk-nota-712199-002.jpg" media-type="image/jpeg" />
+      <item id="image_3" href="images/dk-nota-712199-003.jpg" media-type="image/jpeg" />
+      <item id="image_4" href="images/dk-nota-712199-004.jpg" media-type="image/jpeg" />
+      <item id="image_5" href="images/dk-nota-712199-005.jpg" media-type="image/jpeg" />
+      <item id="image_6" href="images/dk-nota-712199-006.jpg" media-type="image/jpeg" />
+      <item id="image_7" href="images/dk-nota-712199-007.jpg" media-type="image/jpeg" />
+      <item id="image_8" href="images/dk-nota-712199-008.jpg" media-type="image/jpeg" />
+      <item id="image_9" href="images/dk-nota-712199-009.jpg" media-type="image/jpeg" />
+      <item id="image_10" href="images/dk-nota-712199-010.jpg" media-type="image/jpeg" />
+      <item id="image_11" href="images/dk-nota-712199-011.jpg" media-type="image/jpeg" />
+      <item id="image_12" href="images/dk-nota-712199-012.jpg" media-type="image/jpeg" />
+      <item id="image_13" href="images/dk-nota-712199-013.jpg" media-type="image/jpeg" />
+      <item id="css_1" media-type="text/css" href="css/stylesheet.css" />
+      <item id="nav_xhtml" media-type="application/xhtml+xml" href="nav.xhtml" properties="nav" />
+   <item href="images/cover.jpg" media-type="image/jpeg" properties="cover-image" /></manifest>
+   <spine>
+      <itemref idref="document_1" />
+      <itemref idref="document_2" />
+      <itemref idref="document_3" />
+      <itemref idref="document_4" />
+      <itemref idref="document_5" />
+      <itemref idref="document_6" />
+      <itemref idref="document_7" />
+      <itemref idref="document_8" />
+   </spine>
+</package>

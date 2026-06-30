@@ -1,0 +1,46 @@
+name: Publications
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Ensure build script is executable
+        run: chmod +x bin/build-publications.sh
+
+      - name: List available publications
+        run: bin/build-publications.sh list
+
+      - name: Build all publications
+        run: |
+          target_dir="$(mktemp -d)"
+          bin/build-publications.sh build "$target_dir"
+          expected_count="$(bin/build-publications.sh list | tail -n +2 | wc -l | tr -d ' ')"
+          actual_count="$(find "$target_dir" -maxdepth 1 -type f | wc -l | tr -d ' ')"
+
+          echo "Expected outputs: $expected_count"
+          echo "Actual outputs: $actual_count"
+
+          if [[ "$expected_count" != "$actual_count" ]]; then
+            echo "Output count mismatch" >&2
+            exit 1
+          fi
+
+      - name: Smoke test PDF regeneration script (dry-run)
+        run: |
+          chmod +x bin/regenerate-pdfs.sh
+          bin/regenerate-pdfs.sh --dry-run
+          bin/regenerate-pdfs.sh --preset alice --dry-run
+          bin/regenerate-pdfs.sh \
+            --url "https://www.gutenberg.org/cache/epub/84/pg84-images.html" \
+            --output frankenstein.pdf \
+            --dry-run

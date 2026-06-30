@@ -1,0 +1,218 @@
+{
+  "@context": "https://readium.org/webpub-manifest/context.jsonld",
+  "links": [
+    {
+      "href": "https://merkur.nota.dk/opds2/publication/merkur:libraryid:39031/stream/WebPubAudioOnly/manifest.json",
+      "rel": "self",
+      "type": "application/webpub+json"
+    }
+  ],
+  "metadata": {
+    "@type": "http://schema.org/Audiobook",
+    "author": {
+      "name": "Philip Pullman"
+    },
+    "conformsTo": "https://readium.org/webpub-manifest/profiles/audiobook",
+    "duration": 3406,
+    "identifier": "dk-nota-39031",
+    "modified": "2011-11-24T00:00:00+00:00",
+    "narrator": {
+      "name": "David Thorpe"
+    },
+    "stamp": "23450587",
+    "title": "Lyra's Oxford"
+  },
+  "readingOrder": [
+    {
+      "duration": 15.02,
+      "href": "Lyra_s_Oxford-00001.mp3",
+      "title": "Lyra's Oxford",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 4.232,
+      "href": "Lyra_s_Oxford-00002.mp3",
+      "title": "Details of Book",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 33.019,
+      "href": "Lyra_s_Oxford-00003.mp3",
+      "title": "Blurb",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 9.117,
+      "href": "Lyra_s_Oxford-00004.mp3",
+      "title": "Chapters",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 8.738,
+      "href": "Lyra_s_Oxford-00005.mp3",
+      "title": "Structure",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 21.773,
+      "href": "Lyra_s_Oxford-00006.mp3",
+      "title": "Copyright",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 5.864,
+      "href": "Lyra_s_Oxford-00007.mp3",
+      "title": "Title Page",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 53.864,
+      "href": "Lyra_s_Oxford-00008.mp3",
+      "title": "Quote",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 149.708,
+      "href": "Lyra_s_Oxford-00009.mp3",
+      "title": "Author's Note",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 3030.48,
+      "href": "Lyra_s_Oxford-00010.mp3",
+      "title": "Lyra and the Birds",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 3.931,
+      "href": "Lyra_s_Oxford-00011.mp3",
+      "title": "End by Title",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 12.382,
+      "href": "Lyra_s_Oxford-00012.mp3",
+      "title": "Location",
+      "type": "audio/mpeg"
+    },
+    {
+      "duration": 58.867,
+      "href": "Lyra_s_Oxford-00013.mp3",
+      "title": "End Generic",
+      "type": "audio/mpeg"
+    }
+  ],
+  "resources": [
+    {
+      "href": "Lyra_s_Oxford-00001.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00002.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00003.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00004.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00005.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00006.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00007.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00008.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00009.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00010.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00011.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00012.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Lyra_s_Oxford-00013.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "cover.jpg",
+      "rel": "cover",
+      "type": "image/jpeg"
+    }
+  ],
+  "toc": [
+    {
+      "href": "Lyra_s_Oxford-00001.mp3#t=0",
+      "title": "Lyra's Oxford"
+    },
+    {
+      "href": "Lyra_s_Oxford-00002.mp3#t=0",
+      "title": "Details of Book"
+    },
+    {
+      "href": "Lyra_s_Oxford-00003.mp3#t=0",
+      "title": "Blurb"
+    },
+    {
+      "href": "Lyra_s_Oxford-00004.mp3#t=0",
+      "title": "Chapters"
+    },
+    {
+      "href": "Lyra_s_Oxford-00005.mp3#t=0",
+      "title": "Structure"
+    },
+    {
+      "href": "Lyra_s_Oxford-00006.mp3#t=0",
+      "title": "Copyright"
+    },
+    {
+      "href": "Lyra_s_Oxford-00007.mp3#t=0",
+      "title": "Title Page"
+    },
+    {
+      "href": "Lyra_s_Oxford-00008.mp3#t=0",
+      "title": "Quote"
+    },
+    {
+      "href": "Lyra_s_Oxford-00009.mp3#t=0",
+      "title": "Author's Note"
+    },
+    {
+      "href": "Lyra_s_Oxford-00010.mp3#t=0",
+      "title": "Lyra and the Birds"
+    },
+    {
+      "href": "Lyra_s_Oxford-00011.mp3#t=0",
+      "title": "End by Title"
+    },
+    {
+      "href": "Lyra_s_Oxford-00012.mp3#t=0",
+      "title": "Location"
+    },
+    {
+      "href": "Lyra_s_Oxford-00013.mp3#t=0",
+      "title": "End Generic"
+    }
+  ]
+}

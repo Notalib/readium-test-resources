@@ -1,0 +1,91 @@
+# CLAUDE Instructions for readium-test-resources
+
+## Purpose
+
+This repository contains publication fixtures used by flutter_readium for integration and behavior testing.
+It is not an application runtime repository.
+
+Favor changes that keep fixtures deterministic, easy to rebuild, and representative of real publication formats.
+
+## Repository Layout
+
+- `Resources/pdf/`: Source PDF fixtures copied as-is into build outputs.
+- `Resources/epub/`: Source EPUB directories.
+- `Resources/webpub/epub/`: WebPub fixtures built from EPUB-style source directories.
+- `Resources/webpub/epub+audio/`: WebPub fixtures that include audio resources.
+- `Resources/webpub/audiobook/`: Audiobook fixtures packaged from source directories.
+- `Resources/webpub/audiobook+remote/`: Remote audiobook manifests (single JSON file per fixture directory).
+- `bin/build-publications.sh`: Source of truth for inventory and packaging behavior.
+
+## Build and Validation Commands
+
+Use the build script instead of ad-hoc zip/copy commands.
+
+```sh
+bin/build-publications.sh list
+bin/build-publications.sh build dist
+bin/build-publications.sh build dist epub/moby_dick
+bin/build-publications.sh build dist webpub/epub/712199_ebook
+```
+
+Notes:
+- Publication IDs are source-relative, for example `pdf/alice`, `epub/moby_dick`, `webpub/audiobook/38533`.
+- `zip` must be installed for archive outputs.
+- CI validates that the number of built files matches the inventory from `list`.
+
+## Fixture Rules
+
+When adding or changing fixtures, keep these invariants intact:
+
+- PDF: `Resources/pdf/*.pdf` is copied unchanged.
+- EPUB: each `Resources/epub/<name>/` directory is packaged as `<name>.epub`.
+  - `mimetype` must exist in the fixture root.
+  - `mimetype` is packaged first and uncompressed.
+- WebPub EPUB and EPUB+Audio:
+  - `Resources/webpub/epub/<name>/` and `Resources/webpub/epub+audio/<name>/` are packaged as `<name>.webpub`.
+- Audiobook:
+  - `Resources/webpub/audiobook/<name>/` is packaged as `<name>.audiobook`.
+- Remote audiobook:
+  - `Resources/webpub/audiobook+remote/<name>/` must contain exactly one file.
+  - That file must be JSON and is copied unchanged to output.
+
+## Contributor Workflow
+
+1. Add or update fixture files under the correct `Resources/` subtree.
+2. Confirm discovery:
+   ```sh
+   bin/build-publications.sh list
+   ```
+3. Build and smoke-test locally:
+   ```sh
+   target_dir="$(mktemp -d)"
+   bin/build-publications.sh build "$target_dir"
+   ```
+4. For focused iteration, build one publication ID:
+   ```sh
+   bin/build-publications.sh build "$target_dir" webpub/epub/712199_ebook
+   ```
+
+## Common Failures and Fixes
+
+- `Required tool not found: zip`
+  - Install `zip` and rerun.
+- `Unknown publication id: ...`
+  - Use `bin/build-publications.sh list` and copy an exact ID.
+- `Missing mimetype in ...`
+  - Ensure EPUB fixture root contains `mimetype`.
+- `Expected exactly one file` or `Expected exactly one JSON file` in `audiobook+remote`
+  - Keep exactly one `.json` file in that fixture directory.
+
+## Governance
+
+- Add only fixtures that are public domain or otherwise copyright-clear.
+- Do not commit secrets (tokens, keys, credentials) to fixture files or manifests.
+- Keep manifests and metadata realistic for testing, but sanitize any private or sensitive data.
+
+## Scope Boundaries
+
+When working in this repository:
+- Prefer fixture and packaging updates only.
+- Avoid introducing unrelated tooling, frameworks, or broad refactors.
+- Keep README and this file aligned when command behavior changes.
