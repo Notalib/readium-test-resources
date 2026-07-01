@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<package xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="id" xml:lang="en">
+  <metadata>
+    <dc:rights>Public domain in the USA.</dc:rights>
+    <dc:identifier id="id">http://www.gutenberg.org/14838</dc:identifier>
+    <dc:creator id="author_0">Beatrix Potter</dc:creator>
+    <meta property="file-as" refines="#author_0">Potter, Beatrix</meta>
+    <meta property="role" refines="#author_0" scheme="marc:relators">aut</meta>
+    <dc:title>The Tale of Peter Rabbit</dc:title>
+    <dc:language>en</dc:language>
+    <dc:subject>Rabbits -- Juvenile fiction</dc:subject>
+    <dc:date>2005-01-30</dc:date>
+    <meta property="dcterms:modified">2026-06-06T14:30:21Z</meta>
+    <dc:source>https://www.gutenberg.org/files/14838/14838-h/14838-h.htm</dc:source>
+    <meta property="schema:accessMode">textual</meta>
+    <meta property="schema:accessibilityFeature">readingOrder</meta>
+    <meta property="schema:accessibilityHazard">none</meta>
+    <meta property="schema:accessModeSufficient">textual,visual</meta>
+    <meta property="schema:accessibilitySummary">This publication may not have complete alternative text descriptions.</meta>
+    <meta name="cover" content="id-8823591339577860949"/>
+  </metadata>
+  <manifest>
+    <!--Image: 623 x 877 size=169159 -->
+    <item href="7658061590118712241_cover.jpg" id="id-8823591339577860949" media-type="image/jpeg" properties="cover-image"/>
+    <!--Image: 539 x 482 size=43282 -->
+    <item href="7658061590118712241_peter04.jpg" id="img_images_peter04.jpg" media-type="image/jpeg"/>
+    <!--Image: 176 x 275 size=5041 -->
+    <item href="7658061590118712241_peter02.gif.png" id="img_images_peter02.gif" media-type="image/png"/>
+    <!--Image: 487 x 575 size=51470 -->
+    <item href="7658061590118712241_peter08.jpg" id="img_images_peter08.jpg" media-type="image/jpeg"/>
+    <!--Image: 469 x 533 size=46340 -->
+    <item href="7658061590118712241_peter11.jpg" id="img_images_peter11.jpg" media-type="image/jpeg"/>
+    <!--Image: 469 x 511 size=50646 -->
+    <item href="7658061590118712241_peter12.jpg" id="img_images_peter12.jpg" media-type="image/jpeg"/>
+    <!--Image: 457 x 566 size=55324 -->
+    <item href="7658061590118712241_peter15.jpg" id="img_images_peter15.jpg" media-type="image/jpeg"/>
+    <!--Image: 487 x 595 size=67780 -->
+    <item href="7658061590118712241_peter16.jpg" id="img_images_peter16.jpg" media-type="image/jpeg"/>
+    <!--Image: 440 x 475 size=48729 -->
+    <item href="7658061590118712241_peter19.jpg" id="img_images_peter19.jpg" media-type="image/jpeg"/>
+    <!--Image: 476 x 557 size=57287 -->
+    <item href="7658061590118712241_peter20.jpg" id="img_images_peter20.jpg" media-type="image/jpeg"/>
+    <!--Image: 431 x 528 size=49039 -->
+    <item href="7658061590118712241_peter23.jpg" id="img_images_peter23.jpg" media-type="image/jpeg"/>
+    <!--Image: 400 x 384 size=29125 -->
+    <item href="7658061590118712241_peter24.jpg" id="img_images_peter24.jpg" media-type="image/jpeg"/>
+    <!--Image: 475 x 453 size=19270 -->
+    <item href="7658061590118712241_peter27.jpg" id="img_images_peter27.jpg" media-type="image/jpeg"/>
+    <!--Image: 470 x 568 size=54756 -->
+    <item href="7658061590118712241_peter28.jpg" id="img_images_peter28.jpg" media-type="image/jpeg"/>
+    <!--Image: 426 x 419 size=48593 -->
+    <item href="7658061590118712241_peter31.jpg" id="img_images_peter31.jpg" media-type="image/jpeg"/>
+    <!--Image: 437 x 512 size=47818 -->
+    <item href="7658061590118712241_peter32.jpg" id="img_images_peter32.jpg" media-type="image/jpeg"/>
+    <!--Image: 474 x 493 size=50163 -->
+    <item href="7658061590118712241_peter35.jpg" id="img_images_peter35.jpg" media-type="image/jpeg"/>
+    <!--Image: 420 x 433 size=32116 -->
+    <item href="7658061590118712241_peter36.jpg" id="img_images_peter36.jpg" media-type="image/jpeg"/>
+    <!--Image: 416 x 545 size=42388 -->
+    <item href="7658061590118712241_peter39.jpg" id="img_images_peter39.jpg" media-type="image/jpeg"/>
+    <!--Image: 469 x 530 size=47001 -->
+    <item href="7658061590118712241_peter40.jpg" id="img_images_peter40.jpg" media-type="image/jpeg"/>
+    <!--Image: 407 x 503 size=39145 -->
+    <item href="7658061590118712241_peter43.jpg" id="img_images_peter43.jpg" media-type="image/jpeg"/>
+    <!--Image: 409 x 537 size=39128 -->
+    <item href="7658061590118712241_peter44.jpg" id="img_images_peter44.jpg" media-type="image/jpeg"/>
+    <!--Image: 461 x 554 size=56577 -->
+    <item href="7658061590118712241_peter47.jpg" id="img_images_peter47.jpg" media-type="image/jpeg"/>
+    <!--Image: 451 x 556 size=62298 -->
+    <item href="7658061590118712241_peter48.jpg" id="img_images_peter48.jpg" media-type="image/jpeg"/>
+    <!--Image: 449 x 533 size=48183 -->
+    <item href="7658061590118712241_peter51.jpg" id="img_images_peter51.jpg" media-type="image/jpeg"/>
+    <!--Image: 408 x 530 size=47930 -->
+    <item href="7658061590118712241_peter52.jpg" id="img_images_peter52.jpg" media-type="image/jpeg"/>
+    <!--Image: 440 x 510 size=63548 -->
+    <item href="7658061590118712241_peter55.jpg" id="img_images_peter55.jpg" media-type="image/jpeg"/>
+    <!--Image: 446 x 505 size=62592 -->
+    <item href="7658061590118712241_peter57.jpg" id="img_images_peter57.jpg" media-type="image/jpeg"/>
+    <!--Image: 469 x 535 size=54362 -->
+    <item href="7658061590118712241_peter58.jpg" id="img_images_peter58.jpg" media-type="image/jpeg"/>
+    <item href="pgepub.css" id="item1" media-type="text/css"/>
+    <item href="0.css" id="item2" media-type="text/css"/>
+    <item href="1.css" id="item3" media-type="text/css"/>
+    <!--Chunk: size=16688 Split on footer-->
+    <item href="7451058775928492912_14838-h-0.htm.xhtml" id="pg-header" media-type="application/xhtml+xml"/>
+    <!--Chunk: size=19574-->
+    <item href="7451058775928492912_14838-h-1.htm.xhtml" id="pg-footer" media-type="application/xhtml+xml"/>
+    <item href="toc.xhtml" id="ncx" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="toc.ncx" id="ncx2" media-type="application/x-dtbncx+xml"/>
+    <item href="wrap0000.xhtml" id="coverpage-wrapper" media-type="application/xhtml+xml" properties="svg"/>
+  </manifest>
+  <spine toc="ncx2">
+    <itemref idref="coverpage-wrapper"/>
+    <itemref idref="pg-header"/>
+    <itemref idref="pg-footer"/>
+  </spine>
+</package>
