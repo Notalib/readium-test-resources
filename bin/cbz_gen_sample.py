@@ -5,10 +5,10 @@ These files are NOT checked into the repo (Resources/downloaded/ is gitignored).
 Run this script once after cloning to get realistic test publications.
 
 Usage:
-  bin/download_sample_fixtures                        # download all fixtures
-  bin/download_sample_fixtures list                   # list available fixture IDs
-  bin/download_sample_fixtures pepper-and-carrot-ep01 # download one fixture
-  bin/download_sample_fixtures --force                # re-download even if already present
+  bin/cbz_gen_sample                        # download all fixtures
+  bin/cbz_gen_sample list                   # list available fixture IDs
+  bin/cbz_gen_sample pepper-and-carrot-ep01 # download one fixture
+  bin/cbz_gen_sample --force                # re-download even if already present
 
 Current fixtures:
   pepper-and-carrot-ep01.cbz  — Episode 1 of Pepper & Carrot by David Revoy

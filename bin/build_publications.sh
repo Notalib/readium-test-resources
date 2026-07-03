@@ -25,7 +25,7 @@ Examples:
   pdf/alice
   cbz/sample_comic
   webpub/divina/50272-nota-comics
-  downloaded/pepper-and-carrot-ep01
+  generated/pepper-and-carrot-ep01
 EOF
 }
 
@@ -111,12 +111,12 @@ discover_publications() {
     printf 'webpub/divina/%s\tdivina\t%s\t%s.divina\n' "$name" "$path" "$name"
   done
 
-  if [[ -d "$RESOURCES_DIR/downloaded" ]]; then
-    for path in "$RESOURCES_DIR"/downloaded/*.cbz "$RESOURCES_DIR"/downloaded/*.divina; do
+  if [[ -d "$RESOURCES_DIR/generated" ]]; then
+    for path in "$RESOURCES_DIR"/generated/*.cbz "$RESOURCES_DIR"/downloaded/*.divina; do
       [[ -f "$path" ]] || continue
       filename="$(basename "$path")"
       stem="${filename%.*}"
-      printf 'downloaded/%s\tpre-built\t%s\t%s\n' "$stem" "$path" "$filename"
+      printf 'generated/%s\tpre-built\t%s\t%s\n' "$stem" "$path" "$filename"
     done
   fi
 }
@@ -241,8 +241,8 @@ build_publications() {
         if [[ ! -f "$source_path" ]]; then
           require_tool python3
           local fixture_name="${publication_id#downloaded/}"
-          printf 'Downloading %s...\n' "$fixture_name"
-          python3 "$ROOT_DIR/bin/download_sample_fixtures.py" "$fixture_name"
+          printf 'Generating %s...\n' "$fixture_name"
+          python3 "$ROOT_DIR/bin/cbz_gen_sample.py" "$fixture_name"
         fi
         cp "$source_path" "$output_path"
         ;;

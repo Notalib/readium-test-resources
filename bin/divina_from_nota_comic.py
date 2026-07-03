@@ -30,10 +30,10 @@ source XHTML), which for one page (image0003) differs slightly from the image's
 intrinsic height -- harmless until zoom rendering is implemented.
 
 Usage (run from the repo root):
-  bin/make_comic_divina.py <src-folder> <out-folder>
+  bin/divina_from_nota_comic.py <src-folder> <out-folder>
 
 Example:
-  bin/make_comic_divina.py \\
+  bin/divina_from_nota_comic.py \\
     Resources/webpub/epub+audio/50272-nota-comics \\
     Resources/webpub/divina/50272-nota-comics
 """
