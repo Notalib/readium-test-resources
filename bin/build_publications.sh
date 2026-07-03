@@ -8,8 +8,8 @@ RESOURCES_DIR="$ROOT_DIR/Resources"
 usage() {
   cat <<'EOF'
 Usage:
-  bin/build-publications.sh list
-  bin/build-publications.sh build TARGET_DIR [PUBLICATION_ID]
+  bin/build_publications.sh list
+  bin/build_publications.sh build TARGET_DIR [PUBLICATION_ID]
 
 Commands:
   list                         List all available publications.
@@ -21,7 +21,7 @@ Examples:
   epub/moby_dick
   webpub/epub/712199_ebook
   webpub/audiobook/38533
-  webpub/audiobook+remote/39031_auth_audiobook
+  webpub/audiobook+remote/39031_auth
   pdf/alice
   cbz/sample_comic
   webpub/divina/50272-nota-comics
@@ -40,33 +40,28 @@ require_tool() {
   command -v "$tool_name" >/dev/null 2>&1 || fail "Required tool not found: $tool_name"
 }
 
-single_json_file() {
+manifest_json_file() {
   local dir_path="$1"
+  local manifest_path="$dir_path/manifest.json"
   local entry_count=0
-  local json_count=0
-  local json_path=""
   local entry_path
+
+  [[ -f "$manifest_path" ]] || fail "Missing manifest.json in $dir_path"
 
   while IFS= read -r entry_path; do
     entry_count=$((entry_count + 1))
     [[ -f "$entry_path" ]] || fail "Expected only files in $dir_path"
-
-    if [[ "$entry_path" == *.json ]]; then
-      json_count=$((json_count + 1))
-      json_path="$entry_path"
-    fi
+    [[ "$entry_path" == "$manifest_path" ]] || fail "Expected only manifest.json in $dir_path"
   done < <(find "$dir_path" -mindepth 1 -maxdepth 1 | LC_ALL=C sort)
 
-  [[ "$entry_count" -eq 1 ]] || fail "Expected exactly one file in $dir_path"
-  [[ "$json_count" -eq 1 ]] || fail "Expected exactly one JSON file in $dir_path"
+  [[ "$entry_count" -eq 1 ]] || fail "Expected only manifest.json in $dir_path"
 
-  printf '%s\n' "$json_path"
+  printf '%s\n' "$manifest_path"
 }
 
 discover_publications() {
   local path
   local name
-  local json_path
 
   for path in "$RESOURCES_DIR"/pdf/*.pdf; do
     [[ -e "$path" ]] || continue
@@ -101,8 +96,7 @@ discover_publications() {
   for path in "$RESOURCES_DIR"/webpub/audiobook+remote/*; do
     [[ -d "$path" ]] || continue
     name="$(basename "$path")"
-    json_path="$(single_json_file "$path")"
-    printf 'webpub/audiobook+remote/%s\tremote-json\t%s\t%s\n' "$name" "$path" "$(basename "$json_path")"
+    printf 'webpub/audiobook+remote/%s\tremote-json\t%s\t%s.json\n' "$name" "$path" "$name"
   done
 
   for path in "$RESOURCES_DIR"/cbz/*; do
@@ -205,7 +199,7 @@ copy_remote_json() {
   local output_path="$2"
   local json_path
 
-  json_path="$(single_json_file "$source_dir")"
+  json_path="$(manifest_json_file "$source_dir")"
   cp "$json_path" "$output_path"
 }
 
@@ -281,7 +275,7 @@ main() {
       list_publications
       ;;
     build)
-      [[ "$#" -ge 2 && "$#" -le 3 ]] || fail "Usage: bin/build-publications.sh build TARGET_DIR [PUBLICATION_ID]"
+      [[ "$#" -ge 2 && "$#" -le 3 ]] || fail "Usage: bin/build_publications.sh build TARGET_DIR [PUBLICATION_ID]"
       require_tool zip
       build_publications "$2" "${3:-}"
       ;;

@@ -14,21 +14,21 @@ Favor changes that keep fixtures deterministic, easy to rebuild, and representat
 - `Resources/webpub/epub/`: WebPub fixtures built from EPUB-style source directories.
 - `Resources/webpub/epub+audio/`: WebPub fixtures that include audio resources.
 - `Resources/webpub/audiobook/`: Audiobook fixtures packaged from source directories.
-- `Resources/webpub/audiobook+remote/`: Remote audiobook manifests (single JSON file per fixture directory).
+- `Resources/webpub/audiobook+remote/`: Remote audiobook manifests. Each fixture directory contains only `manifest.json`; the build emits `<name>.json`. All remote-manifest fixtures live under a `*+remote` folder by convention.
 - `Resources/webpub/divina/`: DiViNa fixtures (folder, packaged as `.divina` by build script). Generated from `epub+audio` sources via `bin/make_comic_divina.py`.
 - `Resources/cbz/`: Comic Book ZIP source directories (packaged as `.cbz`).
 - `Resources/downloaded/`: **Gitignored.** Pre-built archives downloaded by `bin/download_sample_fixtures.py`. Not committed; populate locally after cloning.
-- `bin/build-publications.sh`: Source of truth for inventory and packaging behavior.
+- `bin/build_publications.sh`: Source of truth for inventory and packaging behavior.
 
 ## Build and Validation Commands
 
 Use the build script instead of ad-hoc zip/copy commands.
 
 ```sh
-bin/build-publications.sh list
-bin/build-publications.sh build dist
-bin/build-publications.sh build dist epub/moby_dick
-bin/build-publications.sh build dist webpub/epub/712199_ebook
+bin/build_publications.sh list
+bin/build_publications.sh build dist
+bin/build_publications.sh build dist epub/moby_dick
+bin/build_publications.sh build dist webpub/epub/712199_ebook
 ```
 
 Notes:
@@ -49,24 +49,24 @@ When adding or changing fixtures, keep these invariants intact:
 - Audiobook:
   - `Resources/webpub/audiobook/<name>/` is packaged as `<name>.audiobook`.
 - Remote audiobook:
-  - `Resources/webpub/audiobook+remote/<name>/` must contain exactly one file.
-  - That file must be JSON and is copied unchanged to output.
+  - `Resources/webpub/audiobook+remote/<name>/` must contain only `manifest.json`.
+  - The build emits `<name>.json` from `manifest.json`.
 
 ## Contributor Workflow
 
 1. Add or update fixture files under the correct `Resources/` subtree.
 2. Confirm discovery:
    ```sh
-   bin/build-publications.sh list
+   bin/build_publications.sh list
    ```
 3. Build and smoke-test locally:
    ```sh
    target_dir="$(mktemp -d)"
-   bin/build-publications.sh build "$target_dir"
+   bin/build_publications.sh build "$target_dir"
    ```
 4. For focused iteration, build one publication ID:
    ```sh
-   bin/build-publications.sh build "$target_dir" webpub/epub/712199_ebook
+   bin/build_publications.sh build "$target_dir" webpub/epub/712199_ebook
    ```
 
 ## Common Failures and Fixes
@@ -74,11 +74,11 @@ When adding or changing fixtures, keep these invariants intact:
 - `Required tool not found: zip`
   - Install `zip` and rerun.
 - `Unknown publication id: ...`
-  - Use `bin/build-publications.sh list` and copy an exact ID.
+  - Use `bin/build_publications.sh list` and copy an exact ID.
 - `Missing mimetype in ...`
   - Ensure EPUB fixture root contains `mimetype`.
-- `Expected exactly one file` or `Expected exactly one JSON file` in `audiobook+remote`
-  - Keep exactly one `.json` file in that fixture directory.
+- `Missing manifest.json` in `audiobook+remote`
+  - Ensure the fixture directory contains `manifest.json` at its root.
 
 ## Governance
 

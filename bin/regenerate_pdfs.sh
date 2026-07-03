@@ -13,9 +13,9 @@ KNOWN_PDFS=(time_machine alice)
 usage() {
   cat <<'EOF'
 Usage:
-  bin/regenerate-pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run]
-  bin/regenerate-pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run] --preset NAME [--preset NAME ...]
-  bin/regenerate-pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run] --url URL --output FILE
+  bin/regenerate_pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run]
+  bin/regenerate_pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run] --preset NAME [--preset NAME ...]
+  bin/regenerate_pdfs.sh [--output-dir DIR] [--chrome PATH] [--dry-run] --url URL --output FILE
 
 Regenerates these PDFs from Project Gutenberg HTML:
   - time_machine.pdf
