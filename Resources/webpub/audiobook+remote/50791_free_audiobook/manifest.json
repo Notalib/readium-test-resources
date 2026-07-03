@@ -1,0 +1,408 @@
+{
+  "@context": "https://readium.org/webpub-manifest/context.jsonld",
+  "metadata": {
+    "@type": "http://schema.org/Audiobook",
+    "conformsTo": "https://readium.org/webpub-manifest/profiles/audiobook",
+    "title": "Nota Analyse : synstolkning i teatret",
+    "identifier": "dk-nota-50791",
+    "author": {
+      "name": "Morten Jensen og Michael Blumenfeld"
+    },
+    "duration": 2118,
+    "modified": "2023-01-01T00:00:00+00:00"
+  },
+  "links": [
+    {
+      "href": "https://merkur.nota.dk/opds2/publication/free/50791/stream/WebPubAudioOnly/manifest.json",
+      "type": "application/webpub+json",
+      "rel": "self"
+    }
+  ],
+  "readingOrder": [
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00001.mp3",
+      "title": "-: Nota Analyse: Digitaliseret synstolkning i teatret",
+      "type": "audio/mpeg",
+      "duration": 4.485
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00002.mp3",
+      "title": "Om denne udgave",
+      "type": "audio/mpeg",
+      "duration": 34.853
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00003.mp3",
+      "title": "*",
+      "type": "audio/mpeg",
+      "duration": 75.524
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00004.mp3",
+      "title": "Om Nota Analyse",
+      "type": "audio/mpeg",
+      "duration": 71.369
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00005.mp3",
+      "title": "Indhold",
+      "type": "audio/mpeg",
+      "duration": 108.517
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00006.mp3",
+      "title": "Indledning og formål: Tilgængeligt teater til blinde og stærkt svagsynede",
+      "type": "audio/mpeg",
+      "duration": 149.787
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00007.mp3",
+      "title": "Hvordan kan digitalisering – og automatisering – øge tilgængeligheden?",
+      "type": "audio/mpeg",
+      "duration": 34.444
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00008.mp3",
+      "title": "Konklusion: Synstolkning er essentiel for oplevelsen og kan ske digitalt",
+      "type": "audio/mpeg",
+      "duration": 95.361
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00009.mp3",
+      "title": "En app på brugerens egen smartphone",
+      "type": "audio/mpeg",
+      "duration": 136.739
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00010.mp3",
+      "title": "Også andre tiltag kan øge tilgængeligheden",
+      "type": "audio/mpeg",
+      "duration": 56.542
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00011.mp3",
+      "title": "Appen kan øge medietilgængeligheden",
+      "type": "audio/mpeg",
+      "duration": 30.483
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00012.mp3",
+      "title": "Uddybning af undersøgelsens resultater",
+      "type": "audio/mpeg",
+      "duration": 2.997
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00013.mp3",
+      "title": "Hvilke teaterstykker indgik i undersøgelsen?",
+      "type": "audio/mpeg",
+      "duration": 70.688
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00014.mp3",
+      "title": "Hvilke respondenter var med i undersøgelsen?",
+      "type": "audio/mpeg",
+      "duration": 36.977
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00015.mp3",
+      "title": "Hvordan bruger respondenterne kulturen, og hvad betyder kultur for dem?",
+      "type": "audio/mpeg",
+      "duration": 167.678
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00016.mp3",
+      "title": "Hvordan foregår en synstolkning?",
+      "type": "audio/mpeg",
+      "duration": 79.387
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00017.mp3",
+      "title": "Sådan oplevede respondenterne synstolkningen af teaterstykkerne",
+      "type": "audio/mpeg",
+      "duration": 117.708
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00018.mp3",
+      "title": "Synstolkning kan også kan have sine begrænsninger",
+      "type": "audio/mpeg",
+      "duration": 118.486
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00019.mp3",
+      "title": "Tilgængelighedshierarkiet rangordner de vigtigste tiltag for tilgængeligt teater",
+      "type": "audio/mpeg",
+      "duration": 180.744
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00020.mp3",
+      "title": "Hvilke barrierer gør det vanskeligt at komme i teatret?",
+      "type": "audio/mpeg",
+      "duration": 117.112
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00021.mp3",
+      "title": "Undersøgelsens metode",
+      "type": "audio/mpeg",
+      "duration": 64.834
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00022.mp3",
+      "title": "Teaterstykke 1: Afbrudt Samliv, Teater V",
+      "type": "audio/mpeg",
+      "duration": 83.43
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00023.mp3",
+      "title": "Valg af teaterstykke 2: HEX, Det Kongelige Teater",
+      "type": "audio/mpeg",
+      "duration": 49.197
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00024.mp3",
+      "title": "Interviews og fokusgrupper som dataindsamling",
+      "type": "audio/mpeg",
+      "duration": 92.658
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00025.mp3",
+      "title": "Det næste skridt mod digital synstolkning i teatret",
+      "type": "audio/mpeg",
+      "duration": 90.685
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00026.mp3",
+      "title": "Hvis du har spørgsmål eller kommentarer",
+      "type": "audio/mpeg",
+      "duration": 47.387
+    }
+  ],
+  "resources": [
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00001.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00002.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00003.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00004.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00005.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00006.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00007.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00008.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00009.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00010.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00011.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00012.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00013.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00014.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00015.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00016.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00017.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00018.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00019.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00020.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00021.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00022.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00023.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00024.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00025.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00026.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "cover.jpg",
+      "type": "image/jpeg",
+      "rel": "cover"
+    }
+  ],
+  "toc": [
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00001.mp3#t=0",
+      "title": "-: Nota Analyse: Digitaliseret synstolkning i teatret",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00002.mp3#t=0",
+          "title": "Om denne udgave"
+        }
+      ]
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00003.mp3#t=0",
+      "title": "*"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00004.mp3#t=0",
+      "title": "Om Nota Analyse"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00005.mp3#t=0",
+      "title": "Indhold"
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00006.mp3#t=0",
+      "title": "Indledning og formål: Tilgængeligt teater til blinde og stærkt svagsynede",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00007.mp3#t=0",
+          "title": "Hvordan kan digitalisering – og automatisering – øge tilgængeligheden?"
+        }
+      ]
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00008.mp3#t=0",
+      "title": "Konklusion: Synstolkning er essentiel for oplevelsen og kan ske digitalt",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00009.mp3#t=0",
+          "title": "En app på brugerens egen smartphone"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00010.mp3#t=0",
+          "title": "Også andre tiltag kan øge tilgængeligheden"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00011.mp3#t=0",
+          "title": "Appen kan øge medietilgængeligheden"
+        }
+      ]
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00012.mp3#t=0",
+      "title": "Uddybning af undersøgelsens resultater",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00013.mp3#t=0",
+          "title": "Hvilke teaterstykker indgik i undersøgelsen?"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00014.mp3#t=0",
+          "title": "Hvilke respondenter var med i undersøgelsen?"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00015.mp3#t=0",
+          "title": "Hvordan bruger respondenterne kulturen, og hvad betyder kultur for dem?"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00016.mp3#t=0",
+          "title": "Hvordan foregår en synstolkning?"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00017.mp3#t=0",
+          "title": "Sådan oplevede respondenterne synstolkningen af teaterstykkerne"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00018.mp3#t=0",
+          "title": "Synstolkning kan også kan have sine begrænsninger"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00019.mp3#t=0",
+          "title": "Tilgængelighedshierarkiet rangordner de vigtigste tiltag for tilgængeligt teater"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00020.mp3#t=0",
+          "title": "Hvilke barrierer gør det vanskeligt at komme i teatret?"
+        }
+      ]
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00021.mp3#t=0",
+      "title": "Undersøgelsens metode",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00022.mp3#t=0",
+          "title": "Teaterstykke 1: Afbrudt Samliv, Teater V"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00023.mp3#t=0",
+          "title": "Valg af teaterstykke 2: HEX, Det Kongelige Teater"
+        },
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00024.mp3#t=0",
+          "title": "Interviews og fokusgrupper som dataindsamling"
+        }
+      ]
+    },
+    {
+      "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00025.mp3#t=0",
+      "title": "Det næste skridt mod digital synstolkning i teatret",
+      "children": [
+        {
+          "href": "Nota_Analyse_digitaliseret_synstolkning_i_teatret-00026.mp3#t=0",
+          "title": "Hvis du har spørgsmål eller kommentarer"
+        }
+      ]
+    }
+  ]
+}
