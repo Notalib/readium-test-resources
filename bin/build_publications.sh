@@ -131,18 +131,52 @@ list_publications() {
 
 collect_zip_entries() {
   local dir_path="$1"
-  local exclude_entry="${2:-}"
+  local output_file="$2"
+  local exclude_entry="${3:-}"
   local entry_path
 
-  cd "$dir_path"
+  # Entries travel through temp files, never pipes: a printf blocked on a full
+  # pipe can die with EINTR under load, and a process-substitution producer's
+  # exit status is invisible to pipefail — the archive would silently miss
+  # entries and still report success.
+  local find_list
+  find_list="$(mktemp)"
+  ( cd "$dir_path" && find . -mindepth 1 -type f | LC_ALL=C sort ) > "$find_list"
+
+  : > "$output_file"
   while IFS= read -r entry_path; do
     entry_path="${entry_path#./}"
 
     [[ -n "$entry_path" ]] || continue
     [[ "$entry_path" == "$exclude_entry" ]] && continue
 
-    printf '%s\n' "$entry_path"
-  done < <(find . -mindepth 1 -type f | LC_ALL=C sort)
+    printf '%s\n' "$entry_path" >> "$output_file"
+  done < "$find_list"
+
+  rm -f "$find_list"
+}
+
+verify_archive() {
+  local source_dir="$1"
+  local output_path="$2"
+  local expected_first="${3:-}"
+  local source_count
+  local archive_count
+  local first_entry
+
+  # Compare against the source tree, not the entry list the zip call was
+  # given — a truncated entry list must not be able to vouch for itself.
+  source_count="$(find "$source_dir" -type f | wc -l | tr -d ' ')"
+  archive_count="$(unzip -Z1 "$output_path" | wc -l | tr -d ' ')"
+
+  [[ "$archive_count" -eq "$source_count" ]] ||
+    fail "Archive $output_path holds $archive_count of $source_count source files"
+
+  if [[ -n "$expected_first" ]]; then
+    first_entry="$(unzip -Z1 "$output_path" | head -n 1)"
+    [[ "$first_entry" == "$expected_first" ]] ||
+      fail "Archive $output_path must start with $expected_first, found '$first_entry'"
+  fi
 }
 
 build_flat_archive() {
@@ -150,10 +184,14 @@ build_flat_archive() {
   local output_path="$2"
   local entry_path
   local entries=()
+  local list_file
 
+  list_file="$(mktemp)"
+  collect_zip_entries "$source_dir" "$list_file"
   while IFS= read -r entry_path; do
     entries+=("$entry_path")
-  done < <(collect_zip_entries "$source_dir")
+  done < "$list_file"
+  rm -f "$list_file"
 
   [[ "${#entries[@]}" -gt 0 ]] || fail "No files found in $source_dir"
 
@@ -162,6 +200,8 @@ build_flat_archive() {
     cd "$source_dir"
     zip -X0q "$output_path" "${entries[@]}"
   )
+
+  verify_archive "$source_dir" "$output_path"
 }
 
 build_epub_archive() {
@@ -169,12 +209,16 @@ build_epub_archive() {
   local output_path="$2"
   local entry_path
   local entries=()
+  local list_file
 
   [[ -f "$source_dir/mimetype" ]] || fail "Missing mimetype in $source_dir"
 
+  list_file="$(mktemp)"
+  collect_zip_entries "$source_dir" "$list_file" "mimetype"
   while IFS= read -r entry_path; do
     entries+=("$entry_path")
-  done < <(collect_zip_entries "$source_dir" "mimetype")
+  done < "$list_file"
+  rm -f "$list_file"
 
   rm -f "$output_path"
   (
@@ -185,6 +229,8 @@ build_epub_archive() {
       zip -X0q "$output_path" "${entries[@]}"
     fi
   )
+
+  verify_archive "$source_dir" "$output_path" "mimetype"
 }
 
 copy_pdf() {
@@ -277,6 +323,7 @@ main() {
     build)
       [[ "$#" -ge 2 && "$#" -le 3 ]] || fail "Usage: bin/build_publications.sh build TARGET_DIR [PUBLICATION_ID]"
       require_tool zip
+      require_tool unzip
       build_publications "$2" "${3:-}"
       ;;
     -h|--help|help)
