@@ -1,9 +1,9 @@
 # Test publications for Flutter Readium
 
-This repository contains test publications in various formats for the [flutter_readium](https://github.com/Notalib/flutter_readium/).
+This repository contains test publications in various formats for the [flutter_readium](https://github.com/Notalib/flutter_readium/) plugin.
 
 These test publications should be in the public domain or otherwise free of copyright.
-Some ones prefixed with a number are self-produced by Nota.
+The ones prefixed with a number are self-produced by Nota.
 
 ## Building the Publications
 
