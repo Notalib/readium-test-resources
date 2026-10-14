@@ -1,0 +1,81 @@
+{
+  "@context": "https://readium.org/webpub-manifest/context.jsonld",
+  "metadata": {
+    "@type": "http://schema.org/Book",
+    "conformsTo": "https://readium.org/webpub-manifest/profiles/epub",
+    "identifier": "urn:readium:test:adr-sync-narration-ownership",
+    "title": "Sync Narration ownership regression cases",
+    "language": "en",
+    "duration": 22
+  },
+  "links": [
+    {
+      "href": "manifest.json",
+      "rel": "self",
+      "type": "application/webpub+json"
+    }
+  ],
+  "readingOrder": [
+    {
+      "href": "one.xhtml",
+      "type": "application/xhtml+xml",
+      "title": "First resource",
+      "duration": 22,
+      "properties": {
+        "media-overlay": "narration.json"
+      },
+      "alternate": [
+        {
+          "href": "narration.json",
+          "type": "application/vnd.syncnarr+json",
+          "duration": 22
+        }
+      ]
+    },
+    {
+      "href": "two.xhtml",
+      "type": "application/xhtml+xml",
+      "title": "Second resource"
+    }
+  ],
+  "toc": [
+    {
+      "href": "one.xhtml#parent",
+      "title": "Parent",
+      "children": [
+        {
+          "href": "one.xhtml#heading-a",
+          "title": "Section A"
+        },
+        {
+          "href": "one.xhtml#heading-b",
+          "title": "Section B"
+        },
+        {
+          "href": "one.xhtml#shared-section",
+          "title": "Nested section in first resource"
+        }
+      ]
+    },
+    {
+      "href": "two.xhtml",
+      "title": "Second resource",
+      "children": [
+        {
+          "href": "two.xhtml#shared-section",
+          "title": "Nested section in second resource"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "href": "track.mp3",
+      "type": "audio/mpeg"
+    },
+    {
+      "href": "narration.json",
+      "type": "application/vnd.syncnarr+json"
+    }
+  ]
+}

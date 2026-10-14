@@ -1,0 +1,64 @@
+{
+  "narration": [
+    {
+      "text": "one.xhtml#parent",
+      "narration": [
+        {
+          "text": "one.xhtml#intro",
+          "audio": "track.mp3#t=0,2"
+        },
+        {
+          "text": "one.xhtml#heading-a",
+          "audio": "track.mp3#t=2,4"
+        },
+        {
+          "text": "one.xhtml#generic-wrapper",
+          "narration": [
+            {
+              "text": "one.xhtml#heading-b",
+              "audio": "track.mp3#t=4,6"
+            },
+            {
+              "text": "one.xhtml#paragraph-b",
+              "audio": "track.mp3#t=6,8"
+            }
+          ]
+        },
+        {
+          "text": "one.xhtml#after-wrapper",
+          "audio": "track.mp3#t=8,10"
+        },
+        {
+          "text": "one.xhtml#shared-section",
+          "narration": [
+            {
+              "text": "one.xhtml#inside-section",
+              "audio": "track.mp3#t=10,12"
+            }
+          ]
+        },
+        {
+          "text": "one.xhtml#after-container",
+          "audio": "track.mp3#t=12,14"
+        },
+        {
+          "text": "two.xhtml#boundary",
+          "audio": "track.mp3#t=14,16"
+        },
+        {
+          "text": "two.xhtml#shared-section",
+          "narration": [
+            {
+              "text": "two.xhtml#inside-section",
+              "audio": "track.mp3#t=16,18"
+            }
+          ]
+        },
+        {
+          "text": "two.xhtml#after-boundary",
+          "audio": "track.mp3#t=18,22"
+        }
+      ]
+    }
+  ]
+}
