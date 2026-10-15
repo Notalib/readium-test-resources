@@ -1,0 +1,19 @@
+{
+ "narration": [
+  {
+   "narration": [
+    {
+     "text": "np-0003.xhtml#e10",
+     "audio": "np-0003.mp3#t=0,1.5"
+    },
+    {
+     "text": "np-0003.xhtml#e11",
+     "audio": "np-0003.mp3#t=1.5,3"
+    }
+   ],
+   "text": "np-0003.xhtml",
+   "role": "bodymatter"
+  }
+ ],
+ "role": "section"
+}
