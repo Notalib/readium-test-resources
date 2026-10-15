@@ -1,0 +1,570 @@
+{
+ "@context": "https://readium.org/webpub-manifest/context.jsonld",
+ "metadata": {
+  "@type": "http://schema.org/Book",
+  "conformsTo": "https://readium.org/webpub-manifest/profiles/epub",
+  "identifier": "urn:synthetic:local-newspaper",
+  "title": "Syntetisk lokalavis",
+  "language": "da",
+  "duration": 457.5
+ },
+ "links": [
+  {
+   "rel": "self",
+   "href": "manifest.json",
+   "type": "application/webpub+json"
+  }
+ ],
+ "readingOrder": [
+  {
+   "href": "np-0001.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0001.json"
+   },
+   "duration": 1.5,
+   "alternate": [
+    {
+     "href": "np-0001.json",
+     "duration": 1.5,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0002.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0002.json"
+   },
+   "duration": 1.5,
+   "alternate": [
+    {
+     "href": "np-0002.json",
+     "duration": 1.5,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0003.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0003.json"
+   },
+   "duration": 3.0,
+   "alternate": [
+    {
+     "href": "np-0003.json",
+     "duration": 3.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0004.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0004.json"
+   },
+   "duration": 3.0,
+   "alternate": [
+    {
+     "href": "np-0004.json",
+     "duration": 3.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0005.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0005.json"
+   },
+   "duration": 3.0,
+   "alternate": [
+    {
+     "href": "np-0005.json",
+     "duration": 3.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0006.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0006.json"
+   },
+   "duration": 42.0,
+   "alternate": [
+    {
+     "href": "np-0006.json",
+     "duration": 42.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0007.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0007.json"
+   },
+   "duration": 18.0,
+   "alternate": [
+    {
+     "href": "np-0007.json",
+     "duration": 18.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0008.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0008.json"
+   },
+   "duration": 15.0,
+   "alternate": [
+    {
+     "href": "np-0008.json",
+     "duration": 15.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0009.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0009.json"
+   },
+   "duration": 61.5,
+   "alternate": [
+    {
+     "href": "np-0009.json",
+     "duration": 61.5,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0010.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0010.json"
+   },
+   "duration": 52.5,
+   "alternate": [
+    {
+     "href": "np-0010.json",
+     "duration": 52.5,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0011.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0011.json"
+   },
+   "duration": 48.0,
+   "alternate": [
+    {
+     "href": "np-0011.json",
+     "duration": 48.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0012.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0012.json"
+   },
+   "duration": 15.0,
+   "alternate": [
+    {
+     "href": "np-0012.json",
+     "duration": 15.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0013.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0013.json"
+   },
+   "duration": 36.0,
+   "alternate": [
+    {
+     "href": "np-0013.json",
+     "duration": 36.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0014.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0014.json"
+   },
+   "duration": 30.0,
+   "alternate": [
+    {
+     "href": "np-0014.json",
+     "duration": 30.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0015.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0015.json"
+   },
+   "duration": 30.0,
+   "alternate": [
+    {
+     "href": "np-0015.json",
+     "duration": 30.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0016.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0016.json"
+   },
+   "duration": 21.0,
+   "alternate": [
+    {
+     "href": "np-0016.json",
+     "duration": 21.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0017.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0017.json"
+   },
+   "duration": 21.0,
+   "alternate": [
+    {
+     "href": "np-0017.json",
+     "duration": 21.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0018.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0018.json"
+   },
+   "duration": 42.0,
+   "alternate": [
+    {
+     "href": "np-0018.json",
+     "duration": 42.0,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  },
+  {
+   "href": "np-0019.xhtml",
+   "type": "text/html",
+   "properties": {
+    "media-overlay": "np-0019.json"
+   },
+   "duration": 13.5,
+   "alternate": [
+    {
+     "href": "np-0019.json",
+     "duration": 13.5,
+     "type": "application/vnd.syncnarr+json"
+    }
+   ]
+  }
+ ],
+ "toc": [
+  {
+   "href": "np-0001.xhtml#e2",
+   "title": "Sektion 1",
+   "children": [
+    {
+     "href": "np-0001.xhtml#e4",
+     "title": "Artikel 1.1"
+    }
+   ]
+  },
+  {
+   "href": "np-0002.xhtml#e6",
+   "title": "Sektion 2"
+  },
+  {
+   "href": "np-0003.xhtml#e8",
+   "title": "Sektion 3"
+  },
+  {
+   "href": "np-0004.xhtml#e13",
+   "title": "Sektion 4"
+  },
+  {
+   "href": "np-0005.xhtml#e17",
+   "title": "Sektion 5"
+  },
+  {
+   "href": "np-0006.xhtml#e21",
+   "title": "Sektion 6"
+  },
+  {
+   "href": "np-0007.xhtml#e53",
+   "title": "Sektion 7"
+  },
+  {
+   "href": "np-0008.xhtml#e68",
+   "title": "Sektion 8"
+  },
+  {
+   "href": "np-0009.xhtml#e81",
+   "title": "Sektion 9"
+  },
+  {
+   "href": "np-0010.xhtml#e126",
+   "title": "Sektion 10"
+  },
+  {
+   "href": "np-0011.xhtml#e166",
+   "title": "Sektion 11",
+   "children": [
+    {
+     "href": "np-0011.xhtml#e198",
+     "title": "Artikel 11.1"
+    }
+   ]
+  },
+  {
+   "href": "np-0012.xhtml#e202",
+   "title": "Sektion 12"
+  },
+  {
+   "href": "np-0013.xhtml#e215",
+   "title": "Sektion 13"
+  },
+  {
+   "href": "np-0014.xhtml#e243",
+   "title": "Sektion 14"
+  },
+  {
+   "href": "np-0015.xhtml#e268",
+   "title": "Sektion 15"
+  },
+  {
+   "href": "np-0016.xhtml#e292",
+   "title": "Sektion 16"
+  },
+  {
+   "href": "np-0017.xhtml#e309",
+   "title": "Sektion 17"
+  },
+  {
+   "href": "np-0018.xhtml#e326",
+   "title": "Sektion 18"
+  },
+  {
+   "href": "np-0019.xhtml#e359",
+   "title": "Sektion 19"
+  }
+ ],
+ "resources": [
+  {
+   "href": "np-0001.mp3",
+   "type": "audio/mpeg",
+   "duration": 1.5
+  },
+  {
+   "href": "np-0002.mp3",
+   "type": "audio/mpeg",
+   "duration": 1.5
+  },
+  {
+   "href": "np-0003.mp3",
+   "type": "audio/mpeg",
+   "duration": 3.0
+  },
+  {
+   "href": "np-0004.mp3",
+   "type": "audio/mpeg",
+   "duration": 3.0
+  },
+  {
+   "href": "np-0005.mp3",
+   "type": "audio/mpeg",
+   "duration": 3.0
+  },
+  {
+   "href": "np-0006.mp3",
+   "type": "audio/mpeg",
+   "duration": 42.0
+  },
+  {
+   "href": "np-0007.mp3",
+   "type": "audio/mpeg",
+   "duration": 18.0
+  },
+  {
+   "href": "np-0008.mp3",
+   "type": "audio/mpeg",
+   "duration": 15.0
+  },
+  {
+   "href": "np-0009.mp3",
+   "type": "audio/mpeg",
+   "duration": 61.5
+  },
+  {
+   "href": "np-0010.mp3",
+   "type": "audio/mpeg",
+   "duration": 52.5
+  },
+  {
+   "href": "np-0011.mp3",
+   "type": "audio/mpeg",
+   "duration": 48.0
+  },
+  {
+   "href": "np-0012.mp3",
+   "type": "audio/mpeg",
+   "duration": 15.0
+  },
+  {
+   "href": "np-0013.mp3",
+   "type": "audio/mpeg",
+   "duration": 36.0
+  },
+  {
+   "href": "np-0014.mp3",
+   "type": "audio/mpeg",
+   "duration": 30.0
+  },
+  {
+   "href": "np-0015.mp3",
+   "type": "audio/mpeg",
+   "duration": 30.0
+  },
+  {
+   "href": "np-0016.mp3",
+   "type": "audio/mpeg",
+   "duration": 21.0
+  },
+  {
+   "href": "np-0017.mp3",
+   "type": "audio/mpeg",
+   "duration": 21.0
+  },
+  {
+   "href": "np-0018.mp3",
+   "type": "audio/mpeg",
+   "duration": 42.0
+  },
+  {
+   "href": "np-0019.mp3",
+   "type": "audio/mpeg",
+   "duration": 13.5
+  }
+ ],
+ "pageList": [
+  {
+   "href": "np-0003.xhtml#e9",
+   "title": "1"
+  },
+  {
+   "href": "np-0006.xhtml#e22",
+   "title": "2"
+  },
+  {
+   "href": "np-0006.xhtml#e52",
+   "title": "3"
+  },
+  {
+   "href": "np-0007.xhtml#e54",
+   "title": "4"
+  },
+  {
+   "href": "np-0008.xhtml#e80",
+   "title": "5"
+  },
+  {
+   "href": "np-0009.xhtml#e82",
+   "title": "6"
+  },
+  {
+   "href": "np-0009.xhtml#e125",
+   "title": "7"
+  },
+  {
+   "href": "np-0010.xhtml#e127",
+   "title": "8"
+  },
+  {
+   "href": "np-0010.xhtml#e165",
+   "title": "9"
+  },
+  {
+   "href": "np-0011.xhtml#e167",
+   "title": "10"
+  },
+  {
+   "href": "np-0012.xhtml#e203",
+   "title": "11"
+  },
+  {
+   "href": "np-0013.xhtml#e216",
+   "title": "12"
+  },
+  {
+   "href": "np-0014.xhtml#e244",
+   "title": "13"
+  },
+  {
+   "href": "np-0015.xhtml#e269",
+   "title": "14"
+  },
+  {
+   "href": "np-0015.xhtml#e291",
+   "title": "15"
+  },
+  {
+   "href": "np-0016.xhtml#e293",
+   "title": "16"
+  },
+  {
+   "href": "np-0017.xhtml#e310",
+   "title": "17"
+  },
+  {
+   "href": "np-0018.xhtml#e327",
+   "title": "18"
+  },
+  {
+   "href": "np-0019.xhtml#e360",
+   "title": "19"
+  }
+ ]
+}
