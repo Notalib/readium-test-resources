@@ -27,6 +27,20 @@ The build script applies these rules:
 
 Publication ids are source-relative so they stay unique across formats, for example `pdf/alice`, `epub/moby_dick`, `webpub/epub/712199_ebook`, and `webpub/audiobook+remote/39031_auth`.
 
+### Contributing a fixture
+
+1. Add or update the source files under the appropriate `Resources/` subtree.
+2. Run `bin/build_publications.sh list` and confirm the fixture is discovered with the expected publication id.
+3. Build all publications to a temporary directory and smoke-test the output:
+   ```sh
+   target_dir="$(mktemp -d)"
+   bin/build_publications.sh build "$target_dir"
+   ```
+4. For focused iteration, build just the fixture using its exact publication id:
+   ```sh
+   bin/build_publications.sh build "$target_dir" webpub/epub/712199_ebook
+   ```
+
 ## Regenerating the PDFs
 
 `time_machine.pdf` and `alice.pdf` are rendered from Project Gutenberg HTML via
