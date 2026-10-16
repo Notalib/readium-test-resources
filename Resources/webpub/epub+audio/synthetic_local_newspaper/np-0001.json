@@ -3,8 +3,12 @@
   {
    "narration": [
     {
+     "text": "np-0001.xhtml#prelude",
+     "audio": "np-0001.mp3#t=0,10"
+    },
+    {
      "text": "np-0001.xhtml#e4",
-     "audio": "np-0001.mp3#t=0,1.5"
+     "audio": "np-0001.mp3#t=10,20"
     }
    ],
    "text": "np-0001.xhtml",

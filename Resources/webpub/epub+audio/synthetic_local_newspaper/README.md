@@ -1,26 +1,22 @@
 # Synthetic local newspaper fixture
 
-A synthetic, copyright-clear WebPub with the structure of a Nota local newspaper (Danish "lokalavis"). Real local newspapers have ToC entries that skip-to-next/previous navigation fails on, and they are rights-restricted, so this fixture copies only their structure.
+A compact, copyright-clear WebPub reproducing the navigation shapes of Nota local newspapers. All text and audio are synthetic. The original 19-file shape has been reduced to three files, six cues, and 60 seconds of tones. Each cue lasts ten seconds to leave room for slow simulator startup and delayed events; tests can seek directly to every boundary. The retained resource and element names keep existing regression references recognizable.
 
-What is kept from the source issue: reading order, ToC nesting, XHTML element nesting, `epub:type`/`role`/`lang`, which elements the ToC and Sync Narration point at, Sync Narration nesting and cue order, and the page list numbers.
+## Cases
 
-What is replaced: all text (`Overskrift e<N>` / `Tekst e<N>.`), ids (`e<N>`), titles (`Sektion 1`, `Artikel 1.1`), metadata, and images (now empty `span`s). The audio says each cue's number in Danish (macOS `say -v Sara`) and is padded to 1.5 seconds per cue, so cue `n` in a file spans `t=(n-1)*1.5,n*1.5`.
+| Target or cue | Expected behavior |
+| --- | --- |
+| `np-0001.xhtml#prelude`, t=0–10 | No ToC owner: the cue precedes every anchored entry and there is no file-only entry |
+| `np-0001.xhtml#e2` (empty heading) | Seek forward to `#e4` at t=10, although it has no narrated descendant |
+| `np-0001.xhtml#e3` (section) | Seek to its first narrated descendant, `#e4` at t=10 |
+| `np-0001.xhtml#e4`, t=10–20 | The deeper heading owns this cue, even though the section shares its first cue |
+| `np-0011.xhtml#e166` (section), t=0–10 | Seek to `#e168`; its owner is `#e166` |
+| `np-0011.xhtml#e198` (aside), t=10–30 | Seek to `#e199`; it and the following `#e200` keep owner `#e198` |
+| Next from `np-0011.xhtml#e198` | Cross the resource boundary to `np-0012.xhtml#e202`, cue `#e204` at t=0 |
+| Missing anchor in the playing file | Preserve playback; do not fall back to the file's first cue |
 
-## Shape
+The narration contains a file-level wrapper followed by cues, with no section or aside containers. Those ToC entries therefore require XHTML lookup. The ToC has six entries, depth three. First-section seeking must be identical before and after asynchronous owner enrichment.
 
-- 19 XHTML resources, each with its own Sync Narration JSON and MP3 track (305 cues, 457.5 seconds).
-- 21 ToC entries, depth 2. 19 top-level entries, one per resource.
-- 18 ToC entries point at a `<section>` id that has no cue and is not a Sync Narration container. All cues point at descendants of that section. One more entry has the same shape on an `<aside>`.
-- One `h2` ToC entry is itself a cue (`np-0001.xhtml#e4`). One `h1` ToC entry has no cues inside it.
-- Two resources have more than one ToC entry: `np-0001.xhtml` and `np-0011.xhtml`.
-
-## Expected ToC owner
-
-| Resource | Time (seconds) | First cue text | Expected ToC owner |
-| --- | --- | --- | --- |
-| np-0011.xhtml | 0–43.5 | np-0011.xhtml#e168 | np-0011.xhtml#e166 (`section`) |
-| np-0011.xhtml | 43.5–48 | np-0011.xhtml#e199 | np-0011.xhtml#e198 (`aside`) |
-
-In every other resource, every cue belongs to that resource's single ToC entry. A player that resolves the owner only by exact cue-id match, or only by the ids that a content iterator reports, finds no owner here. Skip-to-next-ToC then falls back to the reading order.
+The audio uses 440/660/880 Hz tones generated with FFmpeg's `sine` source, concatenated in ten-second clips, mono 22.05 kHz MP3 at 32 kbps. No voice, copyrighted recording, or external service is needed. The tests assert cue identity, owner, and timing rather than spoken words.
 
 Build through `bin/build_publications.sh`; do not hand-maintain packaged outputs.
