@@ -1,4 +1,4 @@
-# CLAUDE Instructions for readium-test-resources
+# Agent instructions for readium-test-resources
 
 Publication fixtures for flutter_readium integration tests. Not an app runtime.
 Keep fixtures deterministic, easy to rebuild, and representative of real publication formats.
